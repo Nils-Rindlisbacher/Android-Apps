@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.nilsrindlisbacher.trick_manager.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_overview"
+        android:name="com.nilsrindlisbacher.trick_manager.ui.overview.OverviewFragment"
+        android:label="@string/title_overview"
+        tools:layout="@layout/fragment_overview" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.nilsrindlisbacher.trick_manager.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_generator"
+        android:name="com.nilsrindlisbacher.trick_manager.ui.generator.GeneratorFragment"
+        android:label="@string/title_generator"
+        tools:layout="@layout/fragment_generator" />
 </navigation>
