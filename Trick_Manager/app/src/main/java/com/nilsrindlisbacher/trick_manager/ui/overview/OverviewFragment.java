@@ -24,7 +24,7 @@ public class OverviewFragment extends Fragment {
         binding = FragmentOverviewBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textDashboard;
+        final TextView textView = binding.overviewTitle;
         overviewViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }

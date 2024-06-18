@@ -10,7 +10,7 @@ public class OverviewViewModel extends ViewModel {
 
     public OverviewViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
+        mText.setValue("Trick Overview");
     }
 
     public LiveData<String> getText() {
