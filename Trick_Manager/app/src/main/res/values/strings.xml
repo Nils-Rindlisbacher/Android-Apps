@@ -2,5 +2,7 @@
     <string name="app_name">Trick_Manager</string>
     <string name="title_home">Home</string>
     <string name="title_overview">Overview</string>
-    <string name="title_generator">Trick Generator</string>
+    <string name="title_generator">Generator</string>
+
+    <string name="button_generator">Generate Trick</string>
 </resources>

@@ -24,7 +24,7 @@ public class GeneratorFragment extends Fragment {
         binding = FragmentGeneratorBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGenerator;
+        final TextView textView = binding.generatorTitle;
         generatorViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }

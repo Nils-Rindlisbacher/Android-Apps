@@ -10,7 +10,7 @@ public class GeneratorViewModel extends ViewModel {
 
     public GeneratorViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        mText.setValue("Trick Generator");
     }
 
     public LiveData<String> getText() {
