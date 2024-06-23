@@ -2,6 +2,8 @@ package com.nilsrindlisbacher.trick_manager;
 
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -13,6 +15,8 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.nilsrindlisbacher.trick_manager.databinding.ActivityMainBinding;
 
+import java.io.IOException;
+
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
@@ -23,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-        
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -36,6 +40,15 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+    }
+
+    public void getRandomTrick(View view) throws IOException {
+        Connection connection = new Connection();
+
+        String randomTrick = connection.getRandomTrick();
+
+        TextView trickDisplay=findViewById(R.id.trick_display);
+        trickDisplay.setText(randomTrick);
     }
 
 }
