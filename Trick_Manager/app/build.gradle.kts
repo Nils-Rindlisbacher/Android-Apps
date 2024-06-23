@@ -44,6 +44,8 @@ dependencies {
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
     implementation(files("..\\app\\src\\main\\java\\com\\nilsrindlisbacher\\trick_manager\\Gson\\gson-2.11.0.jar"))
+    implementation(files("..\\\\app\\\\src\\\\main\\\\java\\\\com\\\\nilsrindlisbacher\\\\trick_manager\\\\JSON\\\\json-20240303.jar"))
+    implementation(files("..\\\\app\\\\src\\\\main\\\\java\\\\com\\\\nilsrindlisbacher\\\\trick_manager\\\\IOUtils\\\\commons-io-2.16.1.jar"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
