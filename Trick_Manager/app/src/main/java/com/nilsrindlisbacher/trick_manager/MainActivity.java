@@ -15,6 +15,8 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.nilsrindlisbacher.trick_manager.databinding.ActivityMainBinding;
 
+import org.json.JSONException;
+
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
 
-    public void getRandomTrick(View view) throws IOException {
+    public void getRandomTrick(View view) throws IOException, JSONException {
         Connection connection = new Connection();
 
-        String randomTrick = connection.getRandomTrick();
+        String randomTrick = connection.getRandomTrick("Basic Tricks");
 
         TextView trickDisplay=findViewById(R.id.trick_display);
         trickDisplay.setText(randomTrick);
