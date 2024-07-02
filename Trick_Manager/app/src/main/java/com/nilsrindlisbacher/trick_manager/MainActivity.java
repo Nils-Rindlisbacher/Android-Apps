@@ -3,6 +3,7 @@ package com.nilsrindlisbacher.trick_manager;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -47,7 +48,10 @@ public class MainActivity extends AppCompatActivity {
     public void getRandomTrick(View view) throws IOException, JSONException {
         Connection connection = new Connection();
 
-        String randomTrick = connection.getRandomTrick("Basic Tricks");
+        Spinner spinner = (Spinner)findViewById(R.id.type_spinner);
+        String type = spinner.getSelectedItem().toString();
+
+        String randomTrick = connection.getRandomTrick(type);
 
         TextView trickDisplay=findViewById(R.id.trick_display);
         trickDisplay.setText(randomTrick);

@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.nilsrindlisbacher.trick_manager.Connection;
+import com.nilsrindlisbacher.trick_manager.MainActivity;
 import com.nilsrindlisbacher.trick_manager.R;
 import com.nilsrindlisbacher.trick_manager.databinding.FragmentGeneratorBinding;
 
@@ -23,7 +24,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class GeneratorFragment extends Fragment implements AdapterView.OnItemSelectedListener {
+public class GeneratorFragment extends Fragment {
 
     private FragmentGeneratorBinding binding;
 
@@ -58,17 +59,6 @@ public class GeneratorFragment extends Fragment implements AdapterView.OnItemSel
         typeSpinner.setAdapter(adapter);
 
         return root;
-    }
-
-    public void onItemSelected(AdapterView<?> parent, View view,
-                               int pos, long id) {
-        Spinner typeSpinner = (Spinner) view.findViewById(R.id.type_spinner);
-        typeSpinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
-
-    }
-
-    public void onNothingSelected(AdapterView<?> parent) {
-        // Another interface callback.
     }
 
     @Override
